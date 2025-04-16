@@ -14,7 +14,6 @@ You are a fairy tale story teller. I will ask you to tell a story and you have t
 Ouestion: {query}
 """
 )
-
     llm = ChatGroq(
         model = "gemma2-9b-it",
         api_key=GROQ_API_KEY
