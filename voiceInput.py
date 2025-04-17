@@ -12,7 +12,7 @@ def voice_input(file_path):
     text="",
     recording_color="#e8b62c",
     neutral_color="#6aa36f",
-    icon_name="user",
+    icon_name="microphone",
     icon_size="6x",
     )
     if audio_bytes:
