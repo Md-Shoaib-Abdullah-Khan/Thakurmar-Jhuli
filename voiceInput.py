@@ -3,25 +3,22 @@ import wave as wav
 from audio_recorder_streamlit import audio_recorder
 from groq import Groq
 import os
+from langchain_ollama import ChatOllama, OllamaLLM
 from dotenv import load_dotenv
 load_dotenv()
 
 
 def voice_input(file_path):
-    audio_bytes = audio_recorder(
-    text="",
-    recording_color="#e8b62c",
-    neutral_color="#6aa36f",
-    icon_name="microphone",
-    icon_size="6x",
-    )
+
+    audio_bytes = st.audio_input("What kind of story would you like to hear?")
+
     if audio_bytes:
-        #st.audio(audio_bytes, format="audio/wav")
-        with wav.open(file_path, "wb") as wf:
-            wf.setnchannels(1)      # Mono = 1, Stereo = 2
-            wf.setsampwidth(4)      # 2 bytes per sample (16-bit audio)
-            wf.setframerate(44100)  # Sample rate
-            wf.writeframes(audio_bytes)
+        print(type(audio_bytes))
+        with open(file_path, "wb") as f:
+            f.write(audio_bytes.getbuffer())
+
+        
+        return convert_spech_to_text(file_path)
         
 def convert_spech_to_text(file_path):
     GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
@@ -33,7 +30,7 @@ def convert_spech_to_text(file_path):
         file=audio_file,
         language='en'
     )
-    print(transcription)
+    print(transcription.text)
     return transcription.text
 
 
