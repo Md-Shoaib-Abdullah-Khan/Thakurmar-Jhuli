@@ -55,9 +55,8 @@ streamlit run app.py
 
 ###  API Keys & Setup
 
-- For Whisper, you can use the local model or OpenAI's API (your choice).
 - For Gemma, make sure **Ollama** is installed and running.
-- For Play AI TTS:
+- For Whisper and Play AI TTS:
   - Get API Key from [Groq Console](https://console.groq.com)
   - Store it securely in a `.env` file or Streamlit secrets.
 
