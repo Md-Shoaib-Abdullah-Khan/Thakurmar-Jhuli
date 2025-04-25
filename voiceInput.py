@@ -33,7 +33,3 @@ def convert_spech_to_text(file_path):
     print(transcription.text)
     return transcription.text
 
-
-if __name__ == "__main__":
-    input()
-
