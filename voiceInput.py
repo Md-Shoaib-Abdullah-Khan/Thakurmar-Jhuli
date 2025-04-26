@@ -1,9 +1,6 @@
 import streamlit as st
-import wave as wav
-from audio_recorder_streamlit import audio_recorder
 from groq import Groq
 import os
-from langchain_ollama import ChatOllama, OllamaLLM
 from dotenv import load_dotenv
 load_dotenv()
 

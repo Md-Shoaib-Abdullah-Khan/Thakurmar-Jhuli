@@ -72,21 +72,22 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 🪔 Title and Logo
+#Title and Logo
 st.markdown(f"""
 <div class="app-title">
 <img src="data:image/png;base64,{logo_base64}" alt="App Logo">
-    <h1>Thakurmar Jhuli 📖</h1>
+    <h1>Thakurmar Jhuli</h1>
     
 </div>
 """, unsafe_allow_html=True)
 
-# 🎤 Record button
+#Record button
 st.markdown('<div class="record-button">', unsafe_allow_html=True)
 inputVoice = voice_input("input.wav")
+st.write(f"User input: {inputVoice}")
 st.markdown('</div>', unsafe_allow_html=True)
 
-# 📖 Show story
+#Show story
 if inputVoice:
     story_text = story(inputVoice)
 

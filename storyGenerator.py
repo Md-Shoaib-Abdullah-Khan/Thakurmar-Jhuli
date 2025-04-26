@@ -15,7 +15,7 @@ def story( query):
     """
     )
     llm = ChatOllama(
-        model = "gemma2-9b-it",
+        model = "gemma:2b",
         ) 
 
     story = llm.invoke(prompt.invoke({'query':query})).content
