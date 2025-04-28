@@ -37,7 +37,7 @@
 
 1. **Clone the repo**
 ```bash
-git clone [https://github.com/yourusername/thakurmar-jhuli.git](https://github.com/Md-Shoaib-Abdullah-Khan/Thakurmar-Jhuli)
+git clone https://github.com/Md-Shoaib-Abdullah-Khan/Thakurmar-Jhuli
 cd thakurmar-jhuli
 ```
 
